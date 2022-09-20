@@ -1,0 +1,8 @@
+--  Pet MySQL ptracitce question:
+-- https://www.testdome.com/questions/sql/pets/68916
+
+SELECT name FROM dogs
+
+UNION
+
+SELECT name FROM cats;
