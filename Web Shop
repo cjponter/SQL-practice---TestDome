@@ -1,0 +1,8 @@
+-- Web Shop MySQL pracitce question:
+-- https://www.testdome.com/questions/sql/web-shop/69934
+
+
+SELECT items.name,  sellers.name
+FROM items
+JOIN sellers on sellers.id = items.sellerId
+WHERE sellers.rating > 4;
