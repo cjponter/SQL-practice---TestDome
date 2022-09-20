@@ -1,0 +1,8 @@
+ -- Workers SQL test quesstion:
+ -- https://www.testdome.com/questions/sql/workers/69921
+ 
+SELECT e2.name -- e1.name 
+FROM employees e1
+WHERE e1.id NOT IN (SELECT e2.managerid
+                   FROM employees e2
+                   WHERE e2.managerId IS NOT NULL);  
