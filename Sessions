@@ -1,0 +1,12 @@
+--  Sessions MySQL ptracitce question:
+--  https://www.testdome.com/questions/sql/sessions/68925
+
+
+SELECT s1.userId, AVG(s1.duration)
+FROM sessions s1
+JOIN (SELECT userId, count(userId) 'sessionsCount'
+      FROM sessions
+      GROUP BY userId) s2
+ON s1.userId = s2.userid
+WHERE sessionsCount > 1
+GROUP BY s1.userId;
